@@ -65,7 +65,6 @@ def main():
         with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
-<<<<<<< HEAD
         
         print('\n\n\n')
         print(cenario_atual['titulo'])
@@ -74,10 +73,7 @@ def main():
         print(cenario_atual['descricao'])
         print('\n')
         print(cenario_atual['opcoes'])
-=======
-        print ('GRRRRR')
 
->>>>>>> fa62c5833560564d58a3b357167f4647d94acdb8
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
