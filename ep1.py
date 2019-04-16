@@ -1,8 +1,8 @@
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
-# - aluno A: Fulano da Silva, fulanos@insper.edu.br
-# - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+# - aluno B: Enzo Vidigal, enzolv@al.insper.edu.br
+# - aluno A: Joao Zsigmond, joaoz@al.insper.edu.br
 import time
 
 def carregar_cenarios():
@@ -60,11 +60,19 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
 
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
+###########################################################
+
         with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
+        
+        print('\n\n\n')
+        print(cenario_atual['titulo'])
+        print('-'*(len(cenario_atual['titulo'])))
+        print('\n')
+        print(cenario_atual['descricao'])
+        print('\n')
+        print(cenario_atual['opcoes'])
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
