@@ -66,7 +66,7 @@ def main():
             monster = monster.read()
             print(monster)
         print ('GRRRRR')
-        
+
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
@@ -76,7 +76,7 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
+            escolha = input(cenario_atual['opcoes'])
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
