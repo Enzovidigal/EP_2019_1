@@ -3,7 +3,7 @@
 # Alunos: 
 # - aluno B: Enzo Vidigal, enzolv@al.insper.edu.br
 # - aluno A: Joao Zsigmond, joaoz@al.insper.edu.br
-import time
+import random
 
 def carregar_cenarios():
     cenarios = {
@@ -63,6 +63,10 @@ def main():
             print(monster)
     
     while not game_over:
+        tem_monstro = random.randint(1, 5)
+        if tem_monstro==2:
+            print('UM MONSTRO TE COMEU FILHAO, PERDEU, PLAYBOI')
+            break
         cenario_atual = cenarios[nome_cenario_atual]
 
 ###########################################################
