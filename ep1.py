@@ -65,7 +65,6 @@ def main():
         with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
-<<<<<<< HEAD
         
         print('\n\n\n')
         print(cenario_atual['titulo'])
