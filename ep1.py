@@ -65,6 +65,7 @@ def main():
         with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
+<<<<<<< HEAD
         
         print('\n\n\n')
         print(cenario_atual['titulo'])
@@ -73,6 +74,10 @@ def main():
         print(cenario_atual['descricao'])
         print('\n')
         print(cenario_atual['opcoes'])
+=======
+        print ('GRRRRR')
+
+>>>>>>> fa62c5833560564d58a3b357167f4647d94acdb8
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
@@ -82,7 +87,7 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
+            escolha = input(cenario_atual['opcoes'])
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
