@@ -57,22 +57,22 @@ def main():
     cenarios, nome_cenario_atual = carregar_cenarios()
 
     game_over = False
+    
+    with open('monster.txt', 'r') as monster:
+            monster = monster.read()
+            print(monster)
+    
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
 
 ###########################################################
-
-        with open('monster.txt', 'r') as monster:
-            monster = monster.read()
-            print(monster)
         
         print('\n\n\n')
         print(cenario_atual['titulo'])
         print('-'*(len(cenario_atual['titulo'])))
         print('\n')
         print(cenario_atual['descricao'])
-        print('\n')
-        print(cenario_atual['opcoes'])
+
 
 
         opcoes = cenario_atual['opcoes']
@@ -80,9 +80,6 @@ def main():
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
             escolha = input(cenario_atual['opcoes'])
 
             if escolha in opcoes:
