@@ -65,6 +65,8 @@ def main():
         with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
+        print ('GRRRRR')
+        
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
