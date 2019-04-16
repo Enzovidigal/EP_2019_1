@@ -3,6 +3,7 @@
 # Alunos: 
 # - aluno A: Fulano da Silva, fulanos@insper.edu.br
 # - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+import time
 
 def carregar_cenarios():
     cenarios = {
@@ -61,6 +62,9 @@ def main():
 
         # Aluno A: substitua este comentário pelo código para imprimir 
         # o cenário atual.
+        with open('monster.txt', 'r') as monster:
+            monster = monster.read()
+            print(monster)
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
