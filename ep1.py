@@ -68,13 +68,26 @@ def main():
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
         if tem_monstro==2:
-            print('\nUM MONSTRO TE MORDEU FILHAO, PERDEU UMA VIDA')
-            hitpoints=hitpoints-1
+            print('\nUM MONSTRO TE MORDEU FILHAO, LUTE CONTRA ELE')
+
+
+            if hitpoints>1:
+                luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
+                while luta_ou_foge=='lutar':
+                    resultado_combate = random.randint(-1,1)
+                    hitpoints = hitpoints + resultado_combate
+                    luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
+                if luta_ou_foge=='fugir':
+                    cenario_atual = cenarios[nome_cenario_atual]
+
+
+
+            
         elif tem_premio==1:
             print('\nPARABÉNS AMIGO, VOCÊ GANHOU UMA VIDA')
             hitpoints+=1
         print('\n')
-        print("###---###---###    Você ainda tem {0} vidas    ###---###---###".format(hitpoints))
+        print("###---###---###    Você ainda tem {0} vida(s)    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
 ###########################################################
