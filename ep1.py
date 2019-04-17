@@ -61,12 +61,15 @@ def main():
     with open('monster.txt', 'r') as monster:
             monster = monster.read()
             print(monster)
-    
+
+    hitpoints=10
+
     while not game_over:
         tem_monstro = random.randint(1, 5)
         if tem_monstro==2:
             print('UM MONSTRO TE COMEU FILHAO, PERDEU, PLAYBOI')
-            break
+            hitpoints=hitpoints-1
+            print("Você ainda tem {0} vidas".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
 ###########################################################
@@ -91,9 +94,12 @@ def main():
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
+            elif hitpoints == 0:
+                game_over = True
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+
 
     print("Você morreu!")
 
