@@ -4,6 +4,7 @@
 # - aluno B: Enzo Vidigal, enzolv@al.insper.edu.br
 # - aluno A: Joao Zsigmond, joaoz@al.insper.edu.br
 import random
+import sys
 
 def carregar_cenarios():
     cenarios = {
@@ -62,23 +63,31 @@ def main():
             monster = monster.read()
             print(monster)
 
-    hitpoints=5
+    hitpoints=3
 
     while not game_over:
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
         if tem_monstro==2:
-            print('\nUM MONSTRO TE MORDEU FILHAO, LUTE CONTRA ELE')
+            print('\nUM MONSTRO TE MORDEU FILHÃO, LUTE CONTRA ELE')
 
-
-            if hitpoints>1:
+            luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
+            while luta_ou_foge=='l' and not game_over:
+                probabilidade = random.randint(1,5)
+                if probabilidade==1:
+                    resultado_combate = 1
+                else:
+                    resultado_combate = -1
+                hitpoints = hitpoints + resultado_combate
+                if hitpoints == 0:
+                    print("\n\nVC morreu para o mostro")
+                    sys.exit()
+                    game_over = True
                 luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
-                while luta_ou_foge=='lutar':
-                    resultado_combate = random.randint(-1,1)
-                    hitpoints = hitpoints + resultado_combate
-                    luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
-                if luta_ou_foge=='fugir':
-                    cenario_atual = cenarios[nome_cenario_atual]
+                
+           
+            if luta_ou_foge=='fugir':
+                cenario_atual = cenarios[nome_cenario_atual]
 
 
 
