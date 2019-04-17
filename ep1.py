@@ -66,9 +66,14 @@ def main():
 
     while not game_over:
         tem_monstro = random.randint(1, 5)
+        tem_premio = random.randint(1,8)
         if tem_monstro==2:
             print('UM MONSTRO TE COMEU FILHAO, PERDEU, PLAYBOI')
             hitpoints=hitpoints-1
+            print("Você ainda tem {0} vidas".format(hitpoints))
+        elif tem_premio==1:
+            print('PARABÉNS AMIGO, VOCÊ GANHOU UM PRÊMIO')
+            hitpoints+=1
             print("Você ainda tem {0} vidas".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
