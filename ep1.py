@@ -62,24 +62,24 @@ def main():
             monster = monster.read()
             print(monster)
 
-    hitpoints=10
+    hitpoints=5
 
     while not game_over:
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
         if tem_monstro==2:
-            print('UM MONSTRO TE COMEU FILHAO, PERDEU, PLAYBOI')
+            print('\nUM MONSTRO TE MORDEU FILHAO, PERDEU UMA VIDA')
             hitpoints=hitpoints-1
-            print("Você ainda tem {0} vidas".format(hitpoints))
         elif tem_premio==1:
-            print('PARABÉNS AMIGO, VOCÊ GANHOU UM PRÊMIO')
+            print('\nPARABÉNS AMIGO, VOCÊ GANHOU UMA VIDA')
             hitpoints+=1
-            print("Você ainda tem {0} vidas".format(hitpoints))
+        print('\n')
+        print("###---###---###    Você ainda tem {0} vidas    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
 ###########################################################
         
-        print('\n\n\n')
+        print('\n\n')
         print(cenario_atual['titulo'])
         print('-'*(len(cenario_atual['titulo'])))
         print('\n')
