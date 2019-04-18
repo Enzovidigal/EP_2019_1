@@ -68,26 +68,46 @@ def main():
     while not game_over:
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
-        if tem_monstro==2:
+        if tem_monstro==1:
+            vida_monstro=3
             print('\nUM MONSTRO TE MORDEU FILHÃO, LUTE CONTRA ELE')
 
-            luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
-            while luta_ou_foge=='l' and not game_over:
-                probabilidade = random.randint(1,5)
-                if probabilidade==1:
-                    resultado_combate = 1
-                else:
-                    resultado_combate = -1
-                hitpoints = hitpoints + resultado_combate
-                if hitpoints == 0:
-                    print("\n\nVC morreu para o mostro")
-                    sys.exit()
-                    game_over = True
-                luta_ou_foge = input("Você tem {0} vidas, quer lutar ou fugir?".format(hitpoints))
+            luta_ou_foge = input("Você tem {0} vidas, e o monstro tem{1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
+            while luta_ou_foge!='fugir':
+                prob = random.randint(1,5)
                 
-           
-            if luta_ou_foge=='fugir':
-                cenario_atual = cenarios[nome_cenario_atual]
+                if prob==1 or prob==2:
+                    print('o monstro ganhou o ataque, perde 1 vida')
+                    hitpoints-=1
+                else:
+                    print('vc ganhou o ataque o monstro perdeu 1 vida')
+                    vida_monstro-=1
+                
+                if hitpoints == 0:
+                    print("\n\nO MONSTRO TE DERROTOU")
+                    game_over = True
+                    break
+                elif vida_monstro == 0:
+                    print("\n\n vc derrotou o monstro, ganhou um premio!")
+                    ######ADICIONAR PREMIO
+                    break
+                luta_ou_foge = input("Você tem {0} vidas e o monstro tem{1},, quer lutar ou fugir?".format(hitpoints, vida_monstro))
+                x=random.randint(1,3)
+                if luta_ou_foge=='fugir':  
+                    if x!=2:
+                        print('O monstro não deixou vc fugir! perdeu 1 vida!')
+                        hitpoints-=1
+                        luta_ou_foge=input("Você tem {0} vidas, quer lutar ou tentar fugir denovo?".format(hitpoints))
+                        if hitpoints == 0:
+                            print("\n\nO MONSTRO TE DERROTOU")
+                            game_over = True
+                            break
+               
+            if game_over==True:
+                break
+            elif luta_ou_foge=='fugir':
+                print('voce fugiu com segurança')
+            cenario_atual = cenarios[nome_cenario_atual]
 
 
 
@@ -117,6 +137,7 @@ def main():
             print('O que voce quer fazer? \n')
             for key, value in opcoes.items():
                 print('{0} : {1}'. format(key, value))
+                print('\n')
             escolha = input('Escolha sua opção: ')
 
             if escolha in opcoes:
