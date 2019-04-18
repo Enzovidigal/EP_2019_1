@@ -69,21 +69,22 @@ def main():
     inventario = {}
 
     while not game_over:
+        
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
         if tem_monstro==1:
             vida_monstro=3
-            print('\nUM MONSTRO TE MORDEU FILHÃO, LUTE CONTRA ELE')
+            print('\nGRRRR!!! VOCÊ DEU DE CARA COM UM MONSTRO, LUTE CONTRA ELE')
 
-            luta_ou_foge = input("Você tem {0} vidas, e o monstro tem{1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
+            luta_ou_foge = input("\nVocê tem {0} vidas, e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
             while luta_ou_foge!='fugir':
                 prob = random.randint(1,5)
                 
                 if prob==1 or prob==2:
-                    print('o monstro ganhou o ataque, perde 1 vida')
+                    print('O monstro ganhou o ataque, perde 1 vida')
                     hitpoints-=1
                 else:
-                    print('vc ganhou o ataque o monstro perdeu 1 vida')
+                    print('Vc ganhou o ataque o monstro perdeu 1 vida')
                     vida_monstro-=1
                 
                 if hitpoints == 0:
@@ -92,9 +93,9 @@ def main():
                     break
                 elif vida_monstro == 0:
                     print("\n\n Vc derrotou o monstro, ganhou a chave que abre o próximo nível!")                    
-                    inventario['chave1']= 'Desbloqueia nivel 2'
-                    print(inventario)                 
+                    inventario['chave1']= 'Desbloqueia nivel 2'       
                     break
+                
                 luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
                 x=random.randint(1,3)
                 if luta_ou_foge=='fugir':  
@@ -113,15 +114,16 @@ def main():
                 print('voce fugiu com segurança')
             cenario_atual = cenarios[nome_cenario_atual]
 
-
-
             
         elif tem_premio==1:
-            print('\nPARABÉNS AMIGO, VOCÊ GANHOU UMA VIDA')
+            print('\nPARABÉNS, VOCÊ GANHOU UMA VIDA')
             hitpoints+=1
         print('\n')
         print("###---###---###    Você ainda tem {0} vida(s)    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
+
+
+
 
 ###########################################################
         
@@ -151,6 +153,11 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+
+        #adicionando items ao inventário
+        if  nome_cenario_atual == 'andar professor':
+            print("\n\nBoua! Você ganhou uma espada")
+            inventario['espada']= 'Mata um monstro'
 
 
 
