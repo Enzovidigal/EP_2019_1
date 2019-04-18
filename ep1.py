@@ -43,6 +43,7 @@ def carregar_cenarios():
     return cenarios, nome_cenario_atual
 
 
+
 def main():
     print("Na hora do sufoco!")
     print("------------------")
@@ -64,6 +65,8 @@ def main():
             print(monster)
 
     hitpoints=3
+    
+    inventario = {}
 
     while not game_over:
         tem_monstro = random.randint(1, 5)
@@ -88,10 +91,11 @@ def main():
                     game_over = True
                     break
                 elif vida_monstro == 0:
-                    print("\n\n vc derrotou o monstro, ganhou um premio!")
-                    ######ADICIONAR PREMIO
+                    print("\n\n Vc derrotou o monstro, ganhou a chave que abre o próximo nível!")                    
+                    inventario['chave1']= 'Desbloqueia nivel 2'
+                    print(inventario)                 
                     break
-                luta_ou_foge = input("Você tem {0} vidas e o monstro tem{1},, quer lutar ou fugir?".format(hitpoints, vida_monstro))
+                luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
                 x=random.randint(1,3)
                 if luta_ou_foge=='fugir':  
                     if x!=2:
@@ -147,6 +151,7 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+
 
 
     print("Você morreu!")
