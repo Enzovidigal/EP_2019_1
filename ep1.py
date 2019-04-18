@@ -66,7 +66,7 @@ def main():
 
     hitpoints=3
     
-    inventario = {}
+    inventario = []
 
     while not game_over:
         
@@ -93,7 +93,7 @@ def main():
                     break
                 elif vida_monstro == 0:
                     print("\n\n Vc derrotou o monstro, ganhou a chave que abre o próximo nível!")                    
-                    inventario['chave1']= 'Desbloqueia nivel 2'       
+                    inventario.append('Chave1')       
                     break
                 
                 luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
@@ -157,7 +157,7 @@ def main():
         #adicionando items ao inventário
         if  nome_cenario_atual == 'andar professor':
             print("\n\nBoua! Você ganhou uma espada")
-            inventario['espada']= 'Mata um monstro'
+            inventario.append('espada')
 
 
 
