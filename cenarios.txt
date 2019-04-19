@@ -26,5 +26,56 @@
         "opcoes": {
             "inicio": "Voltar para o saguao de entrada"
         }
+    },
+    "nome_do_cenario": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario2": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario3": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario4": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario5": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario6": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "nome_do_cenario7": {
+        "titulo": "titulo",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
     }
+    
+        
 }
