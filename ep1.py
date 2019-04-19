@@ -41,7 +41,9 @@ def main():
     inventario = []
 
     while not game_over:
-        
+
+        # Feature 1 e Feature 2: Monstros e combate. Tambem inauguramos o inventário, se o monstro for derrotado.
+
         tem_monstro = random.randint(1, 5)
         tem_premio = random.randint(1,8)
         if tem_monstro==1:
@@ -95,10 +97,10 @@ def main():
         cenario_atual = cenarios[nome_cenario_atual]
 
 
-
-
 ###########################################################
-        
+        # Aqui mostramos ao player as opcões que podem ser tomadas e o titulo e descricao do capitulo.
+        # dependendo da escolha do jogador, o "próximo cenario atual" será igual ao que ele escolheu.
+
         print('\n\n')
         print(cenario_atual['titulo'])
         print('-'*(len(cenario_atual['titulo'])))
@@ -125,12 +127,6 @@ def main():
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
-
-        #adicionando items ao inventário
-        if  nome_cenario_atual == 'andar professor':
-            print("\n\nBoua! Você ganhou uma espada")
-            inventario.append('espada')
-
 
 
     print("Você morreu!")
