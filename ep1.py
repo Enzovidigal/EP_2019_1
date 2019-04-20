@@ -96,6 +96,12 @@ def main():
         print("###---###---###    Você ainda tem {0} vida(s)    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
+        #  Feature 4: Teletransporte
+        tem_teletransporte = random.randint(1,10)
+        if tem_teletransporte==2:
+            pergunta_teletransporte = input("Você ganhou um teletransporte! Para que cenario do jogo deseja ir? ")
+            cenario_atual = cenarios[pergunta_teletransporte]
+            
 
 ###########################################################
         # Aqui mostramos ao player as opcões que podem ser tomadas e o titulo e descricao do capitulo.
