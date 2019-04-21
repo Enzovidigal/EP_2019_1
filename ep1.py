@@ -24,7 +24,7 @@ def main():
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
     print()
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
-        "na entrada do Insper, e quer procurar o professor para pedir um "
+        "na entrada do Insper, e quer procurar o professor para pedir um"
         "adiamento do EP (boa sorte...)")
     print()
 
@@ -107,6 +107,14 @@ def main():
         print('\n')
         print("###---###---###    Você ainda tem {0} vida(s)    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
+
+        #Feature 3: Aqui estão os itens que o player ganha ao tomar certas decisões ou os itens que ele precisa ter para entrar em uma nova sala
+
+        if nome_cenario_atual=='saboroso':
+            print("Você recarregou suas energias. Agora você tem 3 vidas novamente")
+            hitpoints = 3
+        
+
             
 
 ###########################################################
