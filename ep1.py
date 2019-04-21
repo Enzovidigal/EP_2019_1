@@ -44,8 +44,9 @@ def main():
 
         # Feature 1 e Feature 2: Monstros e combate. Tambem inauguramos o inventário, se o monstro for derrotado.
 
-        tem_monstro = random.randint(1, 5)
+        tem_monstro = random.randint(1, 3)
         tem_premio = random.randint(1,8)
+        batalha = False
         if tem_monstro==1:
             vida_monstro=3
             print('\nGRRRR!!! VOCÊ DEU DE CARA COM UM MONSTRO, LUTE CONTRA ELE')
@@ -53,6 +54,10 @@ def main():
             luta_ou_foge = input("\nVocê tem {0} vidas, e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
             if luta_ou_foge=='lutar' or luta_ou_foge=='fugir':
                 batalha=True
+            else:
+                print('nem lutar nem fugir? O monstro nao te entendeu... Mas te comeu')
+                game_over=True
+                break
             while batalha:
                 if luta_ou_foge=='lutar':
                     prob = random.randint(1,5)    
@@ -75,8 +80,8 @@ def main():
                     luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
 
                 if luta_ou_foge=='fugir':  
-                    x=random.randint(1,3)
-                    if x!=2:
+                    x=random.randint(1,2)
+                    if x==2:
                         print('O monstro não deixou vc fugir! perdeu 1 vida!')
                         hitpoints-=1
                         if hitpoints!=0:
@@ -85,6 +90,9 @@ def main():
                             print("\n\nO MONSTRO TE DERROTOU")
                             game_over = True
                             break
+                    else:
+                        break
+            
                
             if game_over==True:
                 break
