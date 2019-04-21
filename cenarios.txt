@@ -4,7 +4,9 @@
         "descricao": "Voce esta no saguao de entrada do insper",
         "opcoes": {
             "andar professor": "Tomar o elevador para o andar do professor",
-            "biblioteca": "Ir para a biblioteca"
+            "biblioteca": "Ir para a biblioteca",
+            "predio novo": "Ir ao prédio novo",
+            "saboroso":"Ir bater um Rango"
         }
     },
     "andar professor": {
@@ -12,10 +14,11 @@
         "descricao": "Voce chegou ao andar da sala do seu professor",
         "opcoes": {
             "inicio": "Tomar o elevador para o saguao de entrada",
-            "professor": "Falar com o professor"
+            "sala do professor": "Falar com o professor",
+            "salinha de estudos": "Ir às salinhas de estudo"
         }
     },
-    "professor": {
+    "sala do professor": {
         "titulo": "O monstro do Python",
         "descricao": "Voce foi pedir para o professor adiar o EP. O professor revelou que é um monstro disfarçado e devorou sua alma." ,
         "opcoes": {}
@@ -24,52 +27,53 @@
         "titulo": "Caverna da tranquilidade",
         "descricao": "Voce esta na biblioteca",
         "opcoes": {
-            "inicio": "Voltar para o saguao de entrada"
+            "inicio": "Voltar para o saguao de entrada",
+            "salinha de estudos": "Ir às salinhas de estudo"
         }
     },
-    "nome_do_cenario": {
+    "saboroso": {
         "titulo": "titulo",
         "descricao": "descricao",
         "opcoes": {
             "1_opcao": "o q acontecerá"
         }
     },
-    "nome_do_cenario2": {
+    "predio Novo": {
+        "titulo": "Graal da inovação",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "fablab": {
+        "titulo": "Lar do artesão",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "quarto andar": {
+        "titulo": "Lar da engenharia",
+        "descricao": "descricao",
+        "opcoes": {
+            "1_opcao": "o q acontecerá"
+        }
+    },
+    "help desk": {
         "titulo": "titulo",
         "descricao": "descricao",
         "opcoes": {
             "1_opcao": "o q acontecerá"
         }
     },
-    "nome_do_cenario3": {
+    "multinsper": {
         "titulo": "titulo",
         "descricao": "descricao",
         "opcoes": {
             "1_opcao": "o q acontecerá"
         }
     },
-    "nome_do_cenario4": {
-        "titulo": "titulo",
-        "descricao": "descricao",
-        "opcoes": {
-            "1_opcao": "o q acontecerá"
-        }
-    },
-    "nome_do_cenario5": {
-        "titulo": "titulo",
-        "descricao": "descricao",
-        "opcoes": {
-            "1_opcao": "o q acontecerá"
-        }
-    },
-    "nome_do_cenario6": {
-        "titulo": "titulo",
-        "descricao": "descricao",
-        "opcoes": {
-            "1_opcao": "o q acontecerá"
-        }
-    },
-    "nome_do_cenario7": {
+    "salinha de estudos": {
         "titulo": "titulo",
         "descricao": "descricao",
         "opcoes": {
