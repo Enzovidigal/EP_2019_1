@@ -51,32 +51,36 @@ def main():
             print('\nGRRRR!!! VOCÊ DEU DE CARA COM UM MONSTRO, LUTE CONTRA ELE')
 
             luta_ou_foge = input("\nVocê tem {0} vidas, e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
-            while luta_ou_foge!='fugir':
-                prob = random.randint(1,5)
-                
-                if prob==1 or prob==2:
-                    print('O monstro ganhou o ataque, perde 1 vida')
-                    hitpoints-=1
-                else:
-                    print('Vc ganhou o ataque o monstro perdeu 1 vida')
-                    vida_monstro-=1
-                
-                if hitpoints == 0:
-                    print("\n\nO MONSTRO TE DERROTOU")
-                    game_over = True
-                    break
-                elif vida_monstro == 0 and 'Chave1' not in inventario:
-                    print("\n\nVc derrotou o monstro, ganhou um prêmio\nAgora tens a chave para passar para entrar na sala do mago!")                    
-                    inventario.append('Chave1')       
-                    break
-                
-                luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
-                x=random.randint(1,3)
+            if luta_ou_foge=='lutar' or luta_ou_foge=='fugir':
+                batalha=True
+            while batalha:
+                if luta_ou_foge=='lutar':
+                    prob = random.randint(1,5)    
+                    if prob==1 or prob==2:
+                        print('O monstro ganhou o ataque, perde 1 vida')
+                        hitpoints-=1
+                    else:
+                        print('Vc ganhou o ataque o monstro perdeu 1 vida')
+                        vida_monstro-=1
+                    
+                    if hitpoints == 0:
+                        print("\n\nO MONSTRO TE DERROTOU")
+                        game_over = True
+                        break
+                    elif vida_monstro == 0 and 'Chave1' not in inventario:
+                        print("\n\nVc derrotou o monstro, ganhou um prêmio\nAgora tens a chave para passar para entrar na sala do mago!")                    
+                        inventario.append('Chave1')       
+                        break
+                    
+                    luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
+
                 if luta_ou_foge=='fugir':  
+                    x=random.randint(1,3)
                     if x!=2:
                         print('O monstro não deixou vc fugir! perdeu 1 vida!')
                         hitpoints-=1
-                        luta_ou_foge=input("Você tem {0} vidas, quer lutar ou tentar fugir denovo?".format(hitpoints))
+                        if hitpoints!=0:
+                            luta_ou_foge=input("Você tem {0} vidas, quer lutar ou tentar fugir denovo?".format(hitpoints))
                         if hitpoints == 0:
                             print("\n\nO MONSTRO TE DERROTOU")
                             game_over = True
@@ -111,7 +115,7 @@ def main():
 
         opcoes = cenario_atual['opcoes']
         #  Feature 4: Teletransporte
-        tem_teletransporte = random.randint(1,2)
+        tem_teletransporte = random.randint(1,10)
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
