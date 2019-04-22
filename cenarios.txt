@@ -41,11 +41,10 @@
     },
     "predio novo": {
         "titulo": "Graal da inovação",
-        "descricao": "descricao",
+        "descricao": "Voce veio para o predio novo! Aqui conseguirá mais recursos para alcancar seu objetivo!",
         "opcoes": {
-            "fablab": "o q acontecerá",
-            "help desk": "",
-            "quarto andar": "",
+            "fablab": "Construir ferramentas",
+            "help desk": "Pedir ajuda",
             "sexto andar": ""
         }
     },
@@ -78,7 +77,7 @@
         }
     },
     "salinha de estudos": {
-        "titulo": "titulo",
+        "titulo": "",
         "descricao": "descricao",
         "opcoes": {
             "1_opcao": "o q acontecerá"

@@ -73,7 +73,7 @@ def main():
                         game_over = True
                         break
                     elif vida_monstro == 0 and 'Chave1' not in inventario:
-                        print("\n\nVc derrotou o monstro, ganhou um prêmio\nAgora tens a chave para passar para entrar na sala do mago!")                    
+                        print("\n\nVc derrotou o monstro, ganhou um prêmio\nAgora tens a chave para entrar na salinha de estudos!")                    
                         inventario.append('Chave1')       
                         break
                     elif vida_monstro == 0 and 'Chave1' in inventario:
@@ -117,9 +117,10 @@ def main():
             print("Você recarregou suas energias. Agora você tem 3 vidas novamente")
             hitpoints = 3
         
-        if nome_cenario_atual=='salinha de estudos' and "chave1" not in inventario:
+        if nome_cenario_atual=='salinha de estudos' and "Chave1" not in inventario:
             print("Oh Oh... vc ainda não tem a chave para abrir a salinha! Derrote o monstro primeiro")
-            nome_cenario_atual = 'biblioteca'            
+            nome_cenario_atual = 'biblioteca' 
+            cenario_atual = cenarios[nome_cenario_atual]       
 
 ###########################################################
         # Aqui mostramos ao player as opcões que podem ser tomadas e o titulo e descricao do capitulo.
