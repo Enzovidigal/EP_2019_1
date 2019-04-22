@@ -76,6 +76,10 @@ def main():
                         print("\n\nVc derrotou o monstro, ganhou um prêmio\nAgora tens a chave para passar para entrar na sala do mago!")                    
                         inventario.append('Chave1')       
                         break
+                    elif vida_monstro == 0 and 'Chave1' in inventario:
+                        print("Vc derrotou o monstro")
+                        break
+
                     
                     luta_ou_foge = input("Você tem {0} vidas e o monstro tem {1}, quer lutar ou fugir?".format(hitpoints, vida_monstro))
 
