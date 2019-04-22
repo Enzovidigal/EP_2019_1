@@ -223,8 +223,10 @@ def main():
                 game_over = True
         
         
-
-    print("Você morreu!")
+    if nome_cenario_atual!="lado de fora":
+        print("Voce morreu!")
+    else:
+        print("Voce venceu o jogouoououou!!!")
 
 
 # Programa principal.
