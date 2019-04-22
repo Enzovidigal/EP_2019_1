@@ -5,7 +5,7 @@
         "opcoes": {
             "andar professor": "Tomar o elevador para o andar do professor",
             "biblioteca": "Ir para a biblioteca",
-            "predio novo": "Ir ao prédio novo",
+            "predio novo": "Ir ao predio novo",
             "saboroso":"Ir bater um Rango"
         }
     },
@@ -20,7 +20,7 @@
     },
     "sala do professor": {
         "titulo": "O monstro do Python",
-        "descricao": "Voce foi pedir para o professor adiar o EP, mas ele não estava na sala. Ao invés disso, encontrou um monstro disfarçado de Carol da Costa e foi devorado" ,
+        "descricao": "Voce foi pedir para o professor adiar o EP, mas ele nao estava na sala. Ao inves disso, encontrou um monstro disfarcado de Carol da Costa e foi devorado" ,
         "opcoes": {}
     },
     "biblioteca": {
@@ -44,7 +44,6 @@
         "descricao": "Voce veio para o predio novo! Aqui conseguirá mais recursos para alcancar seu objetivo!",
         "opcoes": {
             "fablab": "Construir ferramentas",
-            "help desk": "Pedir ajuda",
             "sexto andar": "Descubra"
         }
     },
@@ -54,7 +53,9 @@
         "opcoes": {
             "cortadora laser": "Fazer uma espada para derrotar o monstro",
             "impressora 3d": "Imprimir a chave que te deixa encontrar o professor",
-            "fresadora": "Criar uma maquina de teletransporte infinito"
+            "fresadora": "Criar uma maquina de teletransporte infinito",
+            "predio novo": "Voltar para a entrada do predio novo",
+            "sexto andar": "Descubra"
         }
     },
     "fresadora": {
@@ -63,30 +64,30 @@
         "opcoes": {}
     },
     "impressora 3d": {
-
+        
     },
     "cortadora laser": {
 
-    },
-    "help desk": {
-        "titulo": "titulo",
-        "descricao": "descricao",
-        "opcoes": {
-            "1_opcao": "o q acontecerá"
-        }
     },
     "salinha de estudos": {
         "titulo": "Cafofo do silencio",
         "descricao": "Voce entou em uma salinha de estudos!",
         "opcoes": {
-            "biblioteca": "Voltar para a biblioteca"
+            "biblioteca": "Voltar para a biblioteca",
+            "inicio": "voltar para o saguao de entrada"
         }
     },
     "sexto andar": {
         "titulo": "Andar do paraíso",
-        "descricao": "Você está proximo de conseguir o adiantamento. Escolha saibamente suas ações daqui para frente",
+        "descricao": "Voce esta proximo de conseguir o adiantamento. Escolha saibamente suas acoes daqui para frente",
         "opcoes": {
-            "lado fora": "ver se o professor esta do lado de fora do sexto andar"
+            "lado de fora": "ver se o professor esta do lado de fora do sexto andar",
+            "predio novo": "Voltar para a entrada do predio novo",
+            "fablab": "ir para o fablab"
         }
+    },
+    "lado de fora": {
+        "titulo": "Fim do jogo",
+        "descricao": "Voce finalmente encontrou o professor! Explicou a situacao e conseguiu o adiamento do EP! PARABENS VOCE VENCEU O JOGO"
     }        
 }
