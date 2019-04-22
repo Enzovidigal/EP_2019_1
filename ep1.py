@@ -111,7 +111,7 @@ def main():
         print("###---###---###    Você ainda tem {0} vida(s)    ###---###---###".format(hitpoints))
         cenario_atual = cenarios[nome_cenario_atual]
 
-        #Feature 3: Aqui estão os itens que o player ganha ao tomar certas decisões ou os itens que ele precisa ter para entrar em uma nova sala
+        #Feature 3: Aqui estão os itens que o player ganha ao tomar certas decisões ou os itens que ele precisa ter para entrar em um novo cenario
 
         if nome_cenario_atual=='saboroso':
             print("Você recarregou suas energias. Agora você tem 3 vidas novamente")
@@ -120,7 +120,22 @@ def main():
         if nome_cenario_atual=='salinha de estudos' and "Chave1" not in inventario:
             print("Oh Oh... vc ainda não tem a chave para abrir a salinha! Derrote o monstro primeiro")
             nome_cenario_atual = 'biblioteca' 
-            cenario_atual = cenarios[nome_cenario_atual]       
+            cenario_atual = cenarios[nome_cenario_atual] 
+        elif nome_cenario_atual=='salinha de estudos' and "Chave1" in inventario:
+            print("AE CACHORRO, VC CONSEGUIU O QR CODE PARA ENTRAR NO PREDIO NOVO")
+            inventario.append("qr code")   
+
+        if nome_cenario_atual=='predio novo' and 'qr code' not in inventario: 
+            print("Oh Oh... vc ainda não tem o Qr code para entar no predio novo! Entre na salinha de estudos primeiro")
+            nome_cenario_atual = 'inicio' 
+            cenario_atual = cenarios[nome_cenario_atual]
+
+        #Implementações do código
+        if nome_cenario_atual=="fresadora":
+            print("Você nao soube usar a fresadora, se machucou e morreu")
+            break
+        
+
 
 ###########################################################
         # Aqui mostramos ao player as opcões que podem ser tomadas e o titulo e descricao do capitulo.
