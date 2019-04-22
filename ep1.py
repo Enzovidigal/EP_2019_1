@@ -92,7 +92,6 @@ def main():
                             break
                     else:
                         break
-            
                
             if game_over==True:
                 break
@@ -114,8 +113,9 @@ def main():
             print("Você recarregou suas energias. Agora você tem 3 vidas novamente")
             hitpoints = 3
         
-
-            
+        if nome_cenario_atual=='salinha de estudos' and "chave1" not in inventario:
+            print("Oh Oh... vc ainda não tem a chave para abrir a salinha! Derrote o monstro primeiro")
+            nome_cenario_atual = 'biblioteca'            
 
 ###########################################################
         # Aqui mostramos ao player as opcões que podem ser tomadas e o titulo e descricao do capitulo.
