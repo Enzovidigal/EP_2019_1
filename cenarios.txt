@@ -43,6 +43,8 @@
         "titulo": "Graal da inovação",
         "descricao": "Voce veio para o predio novo! Aqui conseguirá mais recursos para alcancar seu objetivo!",
         "opcoes": {
+            "inicio": "voltar para o saguao de entrada",
+            "saboroso": "ir para o saboroso",
             "fablab": "Construir ferramentas",
             "sexto andar": "Descubra"
         }

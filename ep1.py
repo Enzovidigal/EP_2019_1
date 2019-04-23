@@ -131,7 +131,7 @@ def main():
             nome_cenario_atual = 'biblioteca' 
             cenario_atual = cenarios[nome_cenario_atual] 
         elif nome_cenario_atual=='salinha de estudos' and "Chave1" in inventario:
-            slowprint("AE CACHORRO, VC CONSEGUIU O QR CODE PARA ENTRAR NO PREDIO NOVO")
+            slowprint("AE, VC CONSEGUIU O QR CODE PARA ENTRAR NO PREDIO NOVO")
             inventario.append("qr code")   
 
         #*condicao para o player entrar no predio novo
