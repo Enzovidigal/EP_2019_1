@@ -42,7 +42,7 @@ def main():
 
     
 
-    while not game_over:
+    while not game_over and nome_cenario_atual!='lado de fora':
 
         # Feature 1 e Feature 2: Monstros e combate. Tambem inauguramos o inventário, se o monstro for derrotado.
 
@@ -203,6 +203,7 @@ def main():
             pergunta_teletransporte = input("Você ganhou um teletransporte! Para que cenario do jogo deseja ir? ")
             if pergunta_teletransporte in cenarios:
                 nome_cenario_atual = pergunta_teletransporte
+                cenario_atual = cenarios[nome_cenario_atual]
             else:
                 slowprint('Vc entrou no teletrasnporte e caiu em um loop sem saida')
                 game_over = True
@@ -226,7 +227,7 @@ def main():
     if nome_cenario_atual!="lado de fora":
         slowprint("Voce morreu!")
     else:
-        slowprint("Voce venceu o jogouoououou!!!")
+        slowprint("Voce finalmente encontrou o professor! Explicou a situacao e conseguiu o adiamento do EP! PARABENS VOCE VENCEU O JOGO")
         game_over=True
 
 
