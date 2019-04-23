@@ -63,7 +63,7 @@ def main():
             
             while batalha:
                 if "espada" in inventario:
-                    slowprint("Vc tem a espada pirocuda, vc derrotou o monstro")
+                    slowprint("Vc tem a espada irada, vc derrotou o monstro")
                     break
                 else:
                     if luta_ou_foge=='lutar':
