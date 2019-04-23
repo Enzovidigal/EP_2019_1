@@ -88,7 +88,7 @@
     },
     "lado de fora": {
         "titulo": "Fim do jogo",
-        "descricao": "Voce finalmente encontrou o professor! Explicou a situacao e conseguiu o adiamento do EP! PARABENS VOCE VENCEU O JOGO",
+        "descricao": "N tem pq vc ganhou.....",
         "opcoes":{
         }
     }        
